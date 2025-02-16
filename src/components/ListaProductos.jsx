@@ -1,11 +1,12 @@
 import React from 'react'
+import "animate.css";
 
 const ListaProductos = ({data, addToCart}) => {
   return (
     
-    <div className='row row-cols-1 row-cols-md-3 mt-8 g-3 border-4 rounded-4' style={{background: "#F3F4F6"}}>
+    <div className='row row-cols-1 row-cols-md-3 mt-8 g-3 border-4 rounded-4 animate__animated animate__fadeIn"' style={{background: "#F3F4F6"}}>
       {data.products.map((product) => (
-        <div key={product.id} className='col bg-light'>
+        <div key={product.id} className='col bg-light animate__animated animate__fadeInUp'>
             <div className='card shadow-sm border-0 rounded-4 '>
                 <img src={product.image} 
                 alt={product.name}

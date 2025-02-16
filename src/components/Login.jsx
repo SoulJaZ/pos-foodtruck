@@ -8,6 +8,7 @@ import {
 } from 'firebase/auth';
 
 
+
 /* LOGICA */
 const Login = ({usuario, setUsuario}) => {
     
@@ -47,15 +48,21 @@ const Login = ({usuario, setUsuario}) => {
       };
 
   return (
-    <div className='container d-flex justify-content-center align-items-center vh-100'>
-      <div className='alert alert-primary card p-4 shadow-lg' style={{ maxWidth: "400px", width: "100%" }}>
-        <h2 className='text-center text-primary mb-3'>
+    <div className='container-fluid d-flex justify-content-center align-items-center vh-100 animate__animated animate__fadeIn'
+    style={{
+        backgroundImage: "url('/fondo.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
+      <div className='card p-4 shadow-lg rounded-5 animate__animated animate__fadeInDown' 
+      style={{ maxWidth: "400px", width: "100%", background: "rgba(255, 255, 255, 0.9)"}}>
+        <h2 className='text-center text-primary fw-bold mb-3'>
             {estaRegistrado ? "Registro" : "Iniciar Sesión"}
         </h2>
         {error && <div className="alert alert-danger">{error}</div>}
         <form onSubmit={manejarEnvio}>
             <div className='mb-3'>
-                <label className='form-label'>Correo eletrónico </label>
+                <label className='form-label fw-semibold'>Correo eletrónico </label>
                 
                 <input
                     type='email'
@@ -67,7 +74,7 @@ const Login = ({usuario, setUsuario}) => {
                 />
             </div>
             <div className='mb-3'>
-                <label className="form-label">Contraseña</label>
+                <label className="form-label fw-semibold">Contraseña</label>
                 <input
                     type='Password'
                     className='form-control my-2'
@@ -79,11 +86,11 @@ const Login = ({usuario, setUsuario}) => {
 
            
 
-            <button type="submit" className='btn btn-primary w-100'> 
+            <button type="submit" className='btn btn-primary w-100 shadow-sm'> 
                 {estaRegistrado ? "Registrarse" : "Iniciar Sesión"}
             </button>
         </form>
-        <button className='btn btn-link w-100 mt-2' onClick={() => setEstaRegistrado(!estaRegistrado)}>
+        <button className='btn btn-link w-100 mt-2 text-decoration-none' onClick={() => setEstaRegistrado(!estaRegistrado)}>
             {estaRegistrado ? "¿Ya tienes una cuenta? Iniciar Sesión." : "¿No tienes cuenta? Resgistrarse"}
         </button>
         {usuario && (

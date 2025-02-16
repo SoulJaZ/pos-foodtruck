@@ -45,7 +45,7 @@ function App() {
 
   // Función es para guarda la venta en Firebase
   const saveInfo = async () => {
-    if (cartItems.lenght === 0) {
+    if (cartItems.length === 0) {
       alert("El carrito está vacío. Agrega productos antes de continuar.");
       return;
     }
@@ -77,7 +77,7 @@ function App() {
         <>
           <div className="container-fluid">
             <div className="row">
-              <div className="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 bg-light shadow-sm rounded">
+              <div className="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 bg-light shadow-sm rounded animate__animated animate__fadeIn">
                 <h3 className="text-primary fw-bold mb-2 mb-md-0">
                   Bienvenido 🎉 
                 </h3>
@@ -89,7 +89,7 @@ function App() {
                 </button>
               </div>
               <div className="col-12 col-md-8">
-                <h1 className="text-center mt-2 mb-5 text-primary fw-bold">
+                <h1 className="text-center mt-2 mb-5 text-primary fw-bold animate__animated animate__fadeIn">
                   Lista de Productos
                 </h1>
                 {/* esta sección es para la parte de productos. 

@@ -23,7 +23,7 @@ const Carrito = ({ cartItems, delToCart, saveInfo }) => {
                             </button>
                             <strong className="text-white">{item.name}</strong>
                         </div>
-                        <p className="mb-0 text-muted badge">x{item.quantity}</p>
+                        <p className="mb-0 text-white badge">x{item.quantity}</p>
                     </div>
                 ))
             )}
